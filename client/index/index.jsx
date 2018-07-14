@@ -1,5 +1,7 @@
 'use strict';
 
+import React from 'react';
+
 import {
     render
 } from 'react-dom';
@@ -7,7 +9,7 @@ import {
 const App = () =>
       <div>
         <h1>Build Successful!</h1>
-        <p>This file is located under /Client/index/</p>
+        <p>This file is located under /client/index/</p>
       </div>
 
 render(

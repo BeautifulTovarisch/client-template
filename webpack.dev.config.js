@@ -3,11 +3,13 @@ const merge = require( 'webpack-merge' );
 const webpack = require( 'webpack' );
 const commonConfig = require( './webpack.config' );
 
+const WEBPACK_PORT = process.env.WEBPACK_PORT || "3000";
+
 const devConfig = {
     devtool: 'cheap-eval-source-map',
     devServer: {
-        port: "3000",
-        host: "localhost",
+        port: WEBPACK_PORT,
+        host: "0.0.0.0",
         historyApiFallback: true,
         noInfo: false,
         stats: "minimal"

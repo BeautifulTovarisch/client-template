@@ -6,7 +6,7 @@
     "scripts": {
 	"test": "ava --color",
 	"build": "webpack --env.production --config webpack.production.config.js --progress",
-	"server": "webpack-dev-server --hot --colors --config webpack.dev.config.js --watch-poll",
+	"server": "webpack-dev-server --inline --hot --colors --config webpack.dev.config.js --watch-poll",
 	"start": "run-p server test"
     },
     "ava": {
