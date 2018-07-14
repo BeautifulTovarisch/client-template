@@ -7,7 +7,7 @@ import {
 const App = () =>
       <div>
         <h1>Build Successful!</h1>
-        <p>This file is located under /Client/scripts/</p>
+        <p>This file is located under /Client/index/</p>
       </div>
 
 render(
