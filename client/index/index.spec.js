@@ -6,7 +6,7 @@ import React  from 'react';
 import render from 'react-test-renderer';
 
 
-import Example from './sample-component.jsx';
+import Example from './example.jsx';
 
 const add = ( a, b ) => a + b;
 
