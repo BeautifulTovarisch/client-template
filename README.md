@@ -6,7 +6,7 @@ A standalone front-end powered by webpack + webpack-dev-server. Includes configu
 
 ### How do I get set up? ###
 
-[Download this repository](https://bitbucket.org/cgis_development/webpack-scaffolding/get/b3d342f80c7e.zip)
+[Download this repository](https://bitbucket.org/cgis_development/webpack-scaffolding/get/master.zip)
 
 Afterwards, unzip the folder and rename it to the desired project.
 
