@@ -5,19 +5,19 @@
     "main": "main.js",
     "scripts": {
 	"test": "ava --color",
-	"build": "webpack --env.production --config webpack.production.config.js --progress",
-	"server": "webpack-dev-server --inline --hot --colors --config webpack.dev.config.js --watch-poll",
+	"build": "webpack --config webpack.production.js",
+	"server": "webpack-dev-server --hot --config webpack.dev.js",
 	"start": "run-p server test"
     },
     "ava": {
 	"babel": {},
 	"watch": true,
 	"files": [
-	    "client/**/*.spec.js",
+	    "**/*.spec.js",
 	    "!node_modules/"
 	],
 	"sources": [
-	    "client/**/*.{js,jsx}",
+	    "**/*.{js,jsx}",
 	    "!*.bundle.js"
 	],
 	"require": [
@@ -34,24 +34,24 @@
     },
     "devDependencies": {
 	"ava": "^0.25.0",
-	"babel-core": "^6.23.1",
-	"babel-loader": "^6.3.2",
+	"babel-core": "^6.26.3",
+	"babel-loader": "^7.1.5",
 	"babel-polyfill": "^6.23.0",
 	"babel-preset-env": "^1.6.1",
 	"babel-preset-react": "^6.23.0",
 	"babel-register": "^6.26.0",
-	"css-loader": "^0.26.1",
-	"file-loader": "^0.10.0",
-	"imports-loader": "^0.7.0",
+	"css-loader": "^1.0.0",
+	"mini-css-extract-plugin": "^0.4.1",
 	"npm-run-all": "^4.0.2",
-	"react-css-modules": "^4.1.0",
+	"optimize-css-assets-webpack-plugin": "^5.0.0",
+	"react-css-modules": "^4.7.4",
 	"react-test-renderer": "^16.4.1",
-	"style-loader": "^0.13.1",
+	"style-loader": "^0.21.0",
 	"uglify-js": "^2.8.22",
-	"uglifyjs-webpack-plugin": "^0.4.3",
-	"url-loader": "^0.5.7",
-	"webpack": "^2.2.1",
-	"webpack-dev-server": "^2.4.1",
-	"webpack-merge": "^4.1.0"
+	"uglifyjs-webpack-plugin": "^1.2.7",
+	"webpack": "^4.16.3",
+	"webpack-cli": "^3.1.0",
+	"webpack-dev-server": "^3.1.5",
+	"webpack-merge": "^4.1.3"
     }
 }

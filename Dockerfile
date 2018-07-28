@@ -1,19 +1,21 @@
 # Build Process
 
-FROM node:8.11.1 as build
+FROM node:8.11.3 as build
 WORKDIR /app
+
 COPY package.json .
 COPY yarn.lock .
-RUN yarn install
+
+RUN yarn
+
 COPY . /app
+
+RUN yarn run build
+
 CMD [ "npm", "start" ]
 
 # Production Image
 
-FROM node:8.11.1-alpine
-WORKDIR /app
-COPY --from=build /app /app
-RUN yarn install --production
-RUN yarn run build
-USER node
-CMD [ "node", "server.js" ]
+FROM node:8.11.3-alpine
+
+COPY --from=build /app/dist /app
