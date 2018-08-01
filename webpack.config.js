@@ -11,7 +11,7 @@ module.exports = {
         main: [ 'babel-polyfill', path.resolve( __dirname, './Index/index.jsx' ) ]
     },
     output: {
-        path: path.resolve( __dirname, 'dist/' ),
+        path: path.resolve( __dirname, './' ),
         filename: '[name].bundle.js',
         sourceMapFilename: '[name].bundle.map'
     },

@@ -16,7 +16,6 @@ const devConfig = {
         inline: true,
         noInfo: true,
         compress: true,
-        contentBase: path.resolve( __dirname, 'dist/' ),
         historyApiFallback: true
     }
 };
