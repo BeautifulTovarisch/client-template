@@ -18,4 +18,4 @@ CMD [ "npm", "start" ]
 
 FROM node:8.11.3-alpine
 
-COPY --from=build /app/dist /app
+COPY --from=build /app/main.css /app/main.bundle.js /app/index.html /app
